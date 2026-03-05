@@ -1,0 +1,36 @@
+.panel {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #fff;
+}
+
+.panel-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.charts-row {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.chart-wrapper {
+  flex: 1;
+  min-height: 500px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.chart-wrapper .flourish-embed {
+  width: 100%;
+  height: 100%;
+}
