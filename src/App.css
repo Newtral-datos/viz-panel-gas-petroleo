@@ -1,10 +1,17 @@
 .panel {
-  min-height: 100vh;
-  padding: 2rem;
+  padding: 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   background: #fff;
+}
+
+.panel-subtitle {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+  margin-top: -1rem;
+  font-style: italic;
 }
 
 .panel-title {
@@ -20,17 +27,146 @@
   flex: 1;
 }
 
-.chart-wrapper {
+.chart-card {
   flex: 1;
-  min-height: 500px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  padding: 1rem;
+  padding: 1.25rem 1.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.chart-wrapper .flourish-embed {
-  width: 100%;
-  height: 100%;
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.range-selector {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.range-btn {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.75rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.range-btn:hover {
+  border-color: #aaa;
+  color: #333;
+}
+
+.range-btn.active {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+.chart-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.chart-state.error {
+  color: #c00;
+}
+
+.chart-unit {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.chart-unit a {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.chart-unit a:hover {
+  color: #666;
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.indicator-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.indicator-value.up {
+  color: #e03b2e;
+}
+
+.indicator-value.down {
+  color: #1aa86e;
+}
+
+.indicator-label {
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Tooltip */
+.chart-tooltip {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tooltip-date {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0 0 0.2rem;
+}
+
+.tooltip-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .charts-row {
+    flex-direction: column;
+  }
 }
